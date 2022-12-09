@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Cadastro</h1>
+  </header>
+  <form action="">
+    <div class="campos">
+      <label for="Nome">Nome Completo:</label>
+      <input type="text" placeholder="Digite seu nome Completo" required name="Nome" autofocus>
+    </div>
+    <div class="campos">
+      <label for="E-mail">E-Mail:</label>
+      <input type="email" placeholder="Digite seu E-Mail" required name="E-mail">
+    </div>
+    <div class="campos">
+      <label for="telefone">Telefone:</label>
+      <input type="tel" placeholder="Digite seu Telefone" required id="telefone" name="telefone">
+    </div>
+    <div class="campos">
+      <label for="CPF">CPF:</label>
+      <input type="tel" placeholder="Digite seu CPF" required id="CPF" name="CPF">
+    </div>
+    <div class="campos">
+      <label for="adress">Endereço:</label>
+      <input type="text" placeholder="Digite seu Endereço" required name="adress">
+    </div>
+    <div class="campos">
+      <label for="CEP">CEP:</label>
+      <input type="tel" placeholder="Digite seu CEP" required id="CEP" name="CEP">
+    </div>
+  </form>
+  <div class="campos">
+    <button type="button"> Cadastrar</button>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="./js/jquery.mask.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
