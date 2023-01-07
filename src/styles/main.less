@@ -1,0 +1,103 @@
+@import "mapas.less"; // Importando Mapa
+@import "variaveis.less"; // Importando variaveis
+@breakpointMobile: ~"(max-width: 767px)"; // Declarando Escapings para dispositivos Mobile
+@brekpointTablet: ~"(max-width: 1023px)"; // Declarando Escapings para Tablets
+
+.w-100 {
+  // Criando um mixin para utilizar em outras propriedades iguais.
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: #colors[bgcolorbody];
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1024px;
+  .w-100();
+  margin: 0 auto;
+  @media @brekpointTablet {
+    max-width: 80%;
+  }
+}
+header {
+  background-color: #colors[bgcolorheader];
+  position: sticky;
+  top: 0;
+  left: 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+  }
+}
+
+.menu {
+  display: flex;
+  li {
+    font-weight: bold;
+    margin-left: 24px;
+    a {
+      color: @textcolor;
+      text-decoration: none;
+    }
+  }
+}
+
+section {
+  padding: 56px 0;
+}
+
+.products {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+  .w-100(); // Utilizando mixins
+
+  @media @breakpointMobile {
+    display: block;
+  }
+
+  @media @brekpointTablet {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+}
+.product-item {
+  img {
+    .w-100();
+    border-radius: 16px;
+  }
+  @media @breakpointMobile {
+    // Utilizando Escapings
+    margin-bottom: 32px;
+  }
+}
+
+.product-button {
+  display: block;
+  background-color: #colors[bgcolorbutton]; // Utilizando Maps
+  color: @textcolor; // Utilizando variáveis
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin-top: 8px;
+  text-decoration: none;
+  &:hover {
+    background-color: #colors[bgcolorbuttonhover]; // Utilizando maps
+  }
+}
