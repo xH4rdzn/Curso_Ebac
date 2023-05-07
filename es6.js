@@ -7,8 +7,8 @@ const alunos = [
   { aluno: 'Nicolas', nota: 2 },
 ];
 
-function alunosAprovados(apv) {
-  const aprovados = apv.filter((obj) => obj.nota >= 6);
+function alunosAprovados(array) {
+  const aprovados = array.filter((obj) => obj.nota >= 6);
   return aprovados.map((obj) => obj.aluno);
 }
 
